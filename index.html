@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Deepam 3D Creations</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+(function(){
+  emailjs.init("t4sGrWK9H55yT0tcV");
+})();
+</script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="logo">🔥 Deepam 3D Creations</div>
+
+  <div class="nav-icons">
+    <span id="langToggle">🌐</span>
+    <a href="https://wa.me/919566890681" target="_blank">💬</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+
+  <!-- VIDEO BACKGROUND -->
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="assets/video.mp4" type="video/mp4">
+  </video>
+
+  <!-- OVERLAY CONTENT -->
+  <div class="hero-overlay">
+    <h1><span>3D</span> Printing Workshop</h1>
+    <p id="heroText">Turn imagination into reality</p>
+
+    <div class="hero-buttons">
+      <button class="primary">Start Learning</button>
+     <button class="secondary" onclick="openVideo()">▶ Watch Demo</button>
+    </div>
+  </div>
+
+</section>
+
+<!-- WHY -->
+<section class="why">
+  <h2 id="whyTitle">Why Learn 3D?</h2>
+  <p id="whyDesc">
+    3D technology is shaping the future.
+  </p>
+
+  <div class="why-grid" id="whyGrid"></div>
+</section>
+
+<!-- COURSE -->
+<section class="course">
+
+  <div class="course-left">
+    <h2 id="courseTitle">7-Day Workshop Plan</h2>
+    <table id="courseTable"></table>
+  </div>
+
+  <div class="course-right">
+    <img src="assets/image3.jpeg">
+  </div>
+
+</section>
+
+<!-- JOURNEY -->
+<section class="journey">
+  <h2>Journey of Creation</h2>
+
+  <div class="grid">
+    <img src="assets/image.jpeg">
+    <img src="assets/image2.jpeg">
+    <img src="assets/image3.jpeg">
+    <img src="assets/image4.jpeg">
+  </div>
+</section>
+
+<!-- REGISTER -->
+<section class="register">
+
+  <!-- LEFT SIDE -->
+  <div class="steps">
+    <h3 id="stepTitle">💳 Payment Steps</h3>
+
+    <div class="step-box">
+      <p id="step1"></p>
+      <p id="step2"></p>
+      <p id="step3"></p>
+    </div>
+
+    <div class="qr-box">
+      <img src="assets/qr.jpeg" class="qr">
+      <p class="qr-note">Scan & Pay ₹1499</p>
+    </div>
+  </div>
+
+  <!-- RIGHT SIDE FORM -->
+  <div class="form-card">
+
+    <h2 id="formTitle">Register Now</h2>
+
+    <input id="name" placeholder="Student Name *" required>
+
+    <select id="std" required>
+      <option value="">Select Standard *</option>
+      <option>5th</option>
+      <option>6th</option>
+      <option>7th</option>
+      <option>8th</option>
+    </select>
+
+    <input id="school" placeholder="School Name (Optional)">
+
+    <input id="mobile" placeholder="Parent Contact / WhatsApp *" required>
+
+    <input id="txn" placeholder="Transaction ID *" required>
+
+    <input type="file" id="file">
+
+    <!-- TERMS -->
+    <div class="terms">
+      <input type="checkbox" id="agree">
+      <label for="agree">
+        I agree to Deepam 3D Creations terms & conditions
+      </label>
+    </div>
+
+    <button onclick="submitForm()">Submit</button>
+
+  </div>
+
+</section>
+
+<footer>
+  © 2025 Deepam 3D Creations
+</footer>
+
+<script src="script.js"></script>
+<!-- VIDEO MODAL -->
+<div id="videoModal" class="video-modal">
+  
+  <!-- CLICK OUTSIDE AREA -->
+  <div class="modal-bg" onclick="closeVideo()"></div>
+
+  <div class="video-box">
+
+    <!-- FORCE VISIBLE CLOSE BUTTON -->
+    <div class="close-btn" onclick="closeVideo()">✖</div>
+
+    <video id="demoVideo" controls>
+      <source src="assets/video.mp4" type="video/mp4">
+    </video>
+
+  </div>
+</div>
+</div>
+</body>
+</html>
